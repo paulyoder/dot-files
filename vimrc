@@ -2,9 +2,7 @@
 set tabstop=2 "set tabstop to 2 spaces
 set shiftwidth=2 "indent level
 set expandtab
-set guifont=Consolas "set font to Consolas
 set nowrap "do not wrap text
-au GUIEnter * simalt ~x "maximize gvim window on startup
 set ic "perform case insensitive searches
 set smartindent "auto indent new lines
 set nobackup "do not leave a .swp file behind
