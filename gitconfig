@@ -1,0 +1,7 @@
+[user]
+  name = Paul Yoder
+  email = paulyoder@gmail.com
+
+[alias]
+  s = status
+  l = log --oneline
