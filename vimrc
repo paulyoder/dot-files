@@ -9,6 +9,7 @@ set nobackup "do not leave a .swp file behind
 set noswapfile "do not create a .swp file
 set number "show line numbers
 colorscheme rails "use the rails color scheme
+set guioptions-=T "remove toolbar on top
 
 "Mappings
 map ,n :NERDTreeToggle<CR>
@@ -26,4 +27,4 @@ imap <Esc><C-k> <C-W>k
 map <C-l> <C-W>l
 imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
-imap ;; <Esc>
+imap jk <Esc>
