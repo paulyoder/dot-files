@@ -4,4 +4,4 @@
 
 [alias]
   s = status
-  l = log --oneline
+  l = log --oneline --decorate --graph
