@@ -8,6 +8,8 @@ set smartindent "auto indent new lines
 set nobackup "do not leave a .swp file behind
 set noswapfile "do not create a .swp file
 set number "show line numbers
+set ignorecase "search ignores case
+set incsearch "search as you type
 colorscheme rails "use the rails color scheme
 set guioptions-=T "remove toolbar on top
 
@@ -17,6 +19,11 @@ map ,rm :Rmodel<CR>
 map ,rc :Rcontroller<CR>
 map ,rv :Rview<CR>
 map ,rs :Rserver!<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+map <Space> <PageDown>
+map <S-Space> <PageUp>
 
 map <C-h> <C-W>h
 imap <Esc><C-h> <C-W>h
@@ -28,3 +35,4 @@ map <C-l> <C-W>l
 imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
 imap jk <Esc>
+vmap jk <Esc>
