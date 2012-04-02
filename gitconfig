@@ -5,3 +5,4 @@
 [alias]
   s = status
   l = log --oneline --decorate --graph
+  he = push heroku master
