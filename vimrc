@@ -12,6 +12,7 @@ set ignorecase "search ignores case
 set incsearch "search as you type
 colorscheme rails "use the rails color scheme
 set guioptions-=T "remove toolbar on top
+let g:CommandTMaxHeight=20 "set height of CommandT window to 20
 
 "Mappings
 map ,n :NERDTreeToggle<CR>
@@ -19,6 +20,7 @@ map ,rm :Rmodel<CR>
 map ,rc :Rcontroller<CR>
 map ,rv :Rview<CR>
 map ,rs :Rserver!<CR>
+map ,t :CommandT<CR>
 
 vnoremap < <gv
 vnoremap > >gv
@@ -35,4 +37,3 @@ map <C-l> <C-W>l
 imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
 imap jk <Esc>
-vmap jk <Esc>
