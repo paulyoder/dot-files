@@ -1,0 +1,16 @@
+# ~/.tmuxinator/development.yml
+# you can make as many tabs as you wish...
+# tmux command to get current layout: list-windows 
+#  - see http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
+
+project_name: development
+project_root: ~/working/eclipse_workspace/donorelf_android
+# rvm: 1.9.2@rails_project
+tabs:
+  - editor:
+      layout: 399d,238x57,0,0{145x57,0,0,92x57,146,0[92x28,146,0,92x28,146,29]}
+      panes:
+        - vim
+        - git status
+        - top
+  - shell: git status
