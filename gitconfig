@@ -6,3 +6,5 @@
   s = status
   l = log --oneline --decorate --graph
   he = push heroku master
+[core]
+	excludesfile = /Users/paul/.gitignore
