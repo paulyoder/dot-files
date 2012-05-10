@@ -10,7 +10,8 @@ set noswapfile "do not create a .swp file
 set number "show line numbers
 set ignorecase "search ignores case
 set incsearch "search as you type
-colorscheme rails "use the rails color scheme
+colorscheme railscasts "use the rails color scheme
+syntax enable "enable syntax highlighting
 set guioptions-=T "remove toolbar on top
 let g:CommandTMaxHeight=20 "set height of CommandT window to 20
 
