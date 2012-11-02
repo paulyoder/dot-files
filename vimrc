@@ -14,6 +14,7 @@ colorscheme railscasts "use the rails color scheme
 syntax enable "enable syntax highlighting
 set guioptions-=T "remove toolbar on top
 let g:CommandTMaxHeight=20 "set height of CommandT window to 20
+set hlsearch "highlight all instances of currently searched word
 
 "Mappings
 map ,n :NERDTreeToggle<CR>
@@ -22,11 +23,10 @@ map ,rc :Rcontroller<CR>
 map ,rv :Rview<CR>
 map ,rs :Rserver!<CR>
 map ,t :CommandT<CR>
+vmap a :Align =><CR>
 
 vnoremap < <gv
 vnoremap > >gv
-map <Space> <PageDown>
-map <S-Space> <PageUp>
 
 map <C-h> <C-W>h
 imap <Esc><C-h> <C-W>h
