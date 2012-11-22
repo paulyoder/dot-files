@@ -22,9 +22,10 @@ map <Leader>rm :Rmodel<CR>
 map <Leader>rc :Rcontroller<CR>
 map <Leader>rv :Rview<CR>
 map <Leader>rs :Rserver!<CR>
-map <Leader>,t :CommandT<CR>
-map <Leader>t :call RunCurrentTest()<CR>
-map <Leader>o :call RunCurrentLineInTest()<CR>
+map <Leader>ta :call RunCurrentTest()<CR>
+map <Leader>tl :call RunCurrentLineInTest()<CR>
+map <Leader>g :! grunt<CR>
+map <Leader>gt :! grunt test<CR>
 vmap a :Align =><CR>
 
 vnoremap < <gv
