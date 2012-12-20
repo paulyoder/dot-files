@@ -26,6 +26,8 @@ map <Leader>ta :call RunCurrentTest()<CR>
 map <Leader>tl :call RunCurrentLineInTest()<CR>
 map <Leader>g :! grunt<CR>
 map <Leader>gt :! grunt test<CR>
+map <Leader>w :w<CR>
+imap <Leader>w <ESC>:w<CR>
 vmap a :Align =><CR>
 
 vnoremap < <gv
