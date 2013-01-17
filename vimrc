@@ -10,6 +10,7 @@ set noswapfile "do not create a .swp file
 set number "show line numbers
 set ignorecase "search ignores case
 set incsearch "search as you type
+set backspace=2 "make backspace work correctly
 colorscheme railscasts "use the rails color scheme
 syntax enable "enable syntax highlighting
 set guioptions-=T "remove toolbar on top
@@ -43,6 +44,17 @@ map <C-l> <C-W>l
 imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
 imap jk <Esc>
+
+"Macros
+" @c
+" before
+"   body { background: red; }
+" after
+"   body {
+"     background: red;
+"     
+"   }
+let @c='^f{wijkf}ijk0dwkO'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
