@@ -1,19 +1,33 @@
+" **** Vundle ****
+set nocompatible 
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle (required)
+Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
+
+filetype plugin indent on "required
+" **** /Vundle ****
+
+
 "Configurations
-set tabstop=2 "set tabstop to 2 spaces
-set shiftwidth=2 "indent level
+set tabstop=2              "set tabstop to 2 spaces
+set shiftwidth=2           "indent level
 set expandtab
-set nowrap "do not wrap text
-set ic "perform case insensitive searches
-set smartindent "auto indent new lines
-set nobackup "do not leave a .swp file behind
-set noswapfile "do not create a .swp file
-set number "show line numbers
-set ignorecase "search ignores case
-set incsearch "search as you type
-set backspace=2 "make backspace work correctly
-colorscheme railscasts "use the rails color scheme
-syntax enable "enable syntax highlighting
-set guioptions-=T "remove toolbar on top
+set nowrap                 "do not wrap text
+set ic                     "perform case insensitive searches
+set smartindent            "auto indent new lines
+set nobackup               "do not leave a .swp file behind
+set noswapfile             "do not create a .swp file
+set number                 "show line numbers
+set ignorecase             "search ignores case
+set incsearch              "search as you type
+set backspace=2            "make backspace work correctly
+colorscheme railscasts     "use the rails color scheme
+syntax enable              "enable syntax highlighting
+set guioptions-=T          "remove toolbar on top
 let g:CommandTMaxHeight=20 "set height of CommandT window to 20
 
 "Mappings
@@ -29,7 +43,6 @@ map <Leader>g :! grunt<CR>
 map <Leader>gt :! grunt test<CR>
 map <Leader>w :w<CR>
 imap <Leader>w <ESC>:w<CR>
-vmap a :Align =><CR>
 nnoremap <silent> <Leader>f :CommandT<CR>
 
 vnoremap < <gv
@@ -45,6 +58,8 @@ map <C-l> <C-W>l
 imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
 imap jk <Esc>
+
+cmap tt Tab
 
 "Macros
 " @c
