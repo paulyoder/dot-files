@@ -9,3 +9,9 @@
   diffc = diff --color-words
 [core]
 	excludesfile = /Users/paul/.gitignore
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
