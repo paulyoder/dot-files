@@ -9,7 +9,8 @@ set cpo&vim
 AddTabularPattern! 1: /^[^:]*/l0
 AddTabularPattern! :  /:/l1l0
 AddTabularPattern! ,  /,\zs/l0l1
-AddTabularPattern! hash  /:\zs/l0l1
+AddTabularPattern! =  /=
+AddTabularPattern! hash  /^[^:]*:\zs/l0l1
 
 AddTabularPipeline! :, /:.*,/ 
     \ tabular#TabularizeStrings(a:lines, ':', 'l1l0') |
