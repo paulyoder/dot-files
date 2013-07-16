@@ -5,3 +5,6 @@ alias gl='git l'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# have prompt only display $
+export PS1='$ '
