@@ -7,6 +7,7 @@ call vundle#rc()
 " Let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on "required
 " **** /Vundle ****
