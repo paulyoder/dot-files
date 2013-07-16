@@ -8,10 +8,18 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
 Bundle 'rking/ag.vim'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'briancollins/vim-jst'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on "required
 " **** /Vundle ****
 
+runtime macros/matchit.vim
 
 "Configurations
 set tabstop=2              "set tabstop to 2 spaces
