@@ -60,7 +60,7 @@ imap <Esc><C-l> <C-W>l
 map <C-x> <C-W>x
 imap jk <Esc>
 
-cmap tt Tab
+cmap ,t Tab
 
 "Macros
 " @c
