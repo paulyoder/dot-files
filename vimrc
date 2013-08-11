@@ -15,6 +15,8 @@ Bundle 'briancollins/vim-jst'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
 
 filetype plugin indent on "required
 " **** /Vundle ****
@@ -38,6 +40,7 @@ colorscheme railscasts     "use the rails color scheme
 syntax enable              "enable syntax highlighting
 set guioptions-=T          "remove toolbar on top
 let g:CommandTMaxHeight=20 "set height of CommandT window to 20
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")' "run rspec tests in another tmux pane
 
 "Mappings
 let mapleader = ","
@@ -46,8 +49,10 @@ map <Leader>rm :Rmodel<CR>
 map <Leader>rc :Rcontroller<CR>
 map <Leader>rv :Rview<CR>
 map <Leader>rs :Rserver!<CR>
-map <Leader>ta :w<CR>:call RunCurrentTest()<CR>
-map <Leader>tl :w<CR>:call RunCurrentLineInTest()<CR>
+map <Leader>ta :w<CR>:call RunAllSpecs()<CR>
+map <Leader>tf :w<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>tn :w<CR>:call RunNearestSpec()<CR>
+map <Leader>tl :w<CR>:call RunLastSpec()<CR>
 map <Leader>g :! grunt<CR>
 map <Leader>gt :! grunt test<CR>
 map <Leader>w :w<CR>
@@ -80,60 +85,3 @@ cmap ,t Tab
 "     
 "   }
 let @c='^f{wijkf}ijk0dwkO'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Test-running stuff
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RunCurrentTest()
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-  if in_test_file
-    call SetTestFile()
-
-    if match(expand('%'), '\.feature$') != -1
-      call SetTestRunner("!cucumber")
-      exec g:bjo_test_runner g:bjo_test_file
-    elseif match(expand('%'), '_spec\.rb$') != -1
-      call SetTestRunner("!rspec")
-      exec g:bjo_test_runner g:bjo_test_file
-    else
-      call SetTestRunner("!ruby -Itest")
-      exec g:bjo_test_runner g:bjo_test_file
-    endif
-  else
-    exec g:bjo_test_runner g:bjo_test_file
-  endif
-endfunction
-
-function! SetTestRunner(runner)
-  let g:bjo_test_runner=a:runner
-endfunction
-
-function! RunCurrentLineInTest()
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-  if in_test_file
-    call SetTestFileWithLine()
-  end
-
-  exec "!rspec" g:bjo_test_file . ":" . g:bjo_test_file_line
-endfunction
-
-function! SetTestFile()
-  let g:bjo_test_file=@%
-endfunction
-
-function! SetTestFileWithLine()
-  let g:bjo_test_file=@%
-  let g:bjo_test_file_line=line(".")
-endfunction
-
-function! CorrectTestRunner()
-  if match(expand('%'), '\.feature$') != -1
-    return "cucumber"
-  elseif match(expand('%'), '_spec\.rb$') != -1
-    return "rspec"
-  else
-    return "ruby"
-  endif
-endfunction
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
