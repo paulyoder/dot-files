@@ -4,6 +4,7 @@
 
 [alias]
   s = status
+  co = checkout
   l = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)%Creset' --all
   he = push heroku master
   diffc = diff --color-words
