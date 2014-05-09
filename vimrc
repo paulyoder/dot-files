@@ -17,6 +17,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'tpope/vim-endwise'
 
 filetype plugin indent on "required
 " **** /Vundle ****
