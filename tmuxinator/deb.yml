@@ -1,0 +1,16 @@
+# ~/.tmuxinator/development.yml
+# you can make as many tabs as you wish...
+# tmux command to get current layout: list-windows 
+#  - see http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
+
+project_name: deb
+project_root: ~/working/DonorElf_WPEngine/wp-content/themes/donorelf
+tabs:
+  - editor:
+      layout: 2253,238x57,0,0{169x57,0,0,68x57,170,0[68x28,170,0,68x28,170,29]}
+      panes:
+        - vim
+        - git status
+        - 
+  - shell: git status
+  - spork: 
