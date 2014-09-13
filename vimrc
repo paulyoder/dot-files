@@ -1,24 +1,26 @@
 " **** Vundle ****
 set nocompatible 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle (required)
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'rking/ag.vim'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'briancollins/vim-jst'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'tpope/vim-endwise'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'rking/ag.vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'briancollins/vim-jst'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'wincent/command-t'
 
+call vundle#end()         "required
 filetype plugin indent on "required
 " **** /Vundle ****
 
@@ -75,6 +77,9 @@ map <C-x> <C-W>x
 imap jk <Esc>
 
 cmap ,t Tab
+
+" Mouse Scrolling
+set mouse=a
 
 "Macros
 " @c
