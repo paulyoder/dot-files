@@ -4,9 +4,9 @@
 #  - see http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
 
 project_name: de
-project_root: ~/de
+project_root: ~/working/DonorElf
 # rvm: 1.9.2@rails_project
-tabs:
+windows:
   - editor:
       layout: 2253,238x57,0,0{169x57,0,0,68x57,170,0[68x28,170,0,68x28,170,29]}
       panes:
