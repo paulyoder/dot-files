@@ -3,6 +3,7 @@ export EDITOR=vim
 alias gs='git status'
 alias gl='git l'
 
+export PATH=/usr/local/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
