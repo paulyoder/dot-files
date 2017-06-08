@@ -9,3 +9,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # have prompt only display $
 export PS1='$ '
+
+# increase limit of open files
+ulimit -n 2048
