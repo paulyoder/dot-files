@@ -4,7 +4,7 @@
 #  - see http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
 
 project_name: deb
-project_root: ~/working/DonorElf_WPEngine/wp-content/themes/donorelf
+project_root: ~/working/DonorElf_WPEngine/wp-content/themes/donorelf_three
 tabs:
   - editor:
       layout: 2253,238x57,0,0{169x57,0,0,68x57,170,0[68x28,170,0,68x28,170,29]}
