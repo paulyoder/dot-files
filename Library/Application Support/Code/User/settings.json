@@ -1,0 +1,84 @@
+{
+    "editor.tabSize": 2,
+    "workbench.tree.horizontalScrolling": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/bower_components": true,
+        "**/node_modules": true
+    },
+    "editor.minimap.enabled": false,
+    "explorer.autoReveal": false,
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["S"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["%"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "r", "a"], "after": [],
+            "commands": [ {"command": "runInTerminal.runLast" } ]
+        },
+        {
+            "before": ["<leader>", "r", "l"], "after": [],
+            "commands": [ {"command": "runInTerminal.run", "args": {"name": "l"}} ]
+        },
+        {
+            "before": ["<leader>", "r", "b"], "after": [],
+            "commands": [ {"command": "runInTerminal.run", "args": {"name": "b"}} ]
+        },
+        {
+            "before": ["<leader>", "r", "s"], "after": [],
+            "commands": [ {"command": "runInTerminal.run", "args": {"name": "s"}} ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["%"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "runInTerminal.commands": [
+        {"match": "_spec\\.rb$", "name": "l", "cmd": "bundle exec rspec ${relativeFile}:${line}"},
+        {"match": "_spec\\.rb$", "name": "b", "cmd": "bundle exec rspec ${relativeFile}"},
+        {"match": "_spec\\.rb$", "name": "s", "cmd": "bundle exec rspec"},
+    ],
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.largeFileOptimizations": false,
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "gitlens.mode.active": "review",
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true
+}

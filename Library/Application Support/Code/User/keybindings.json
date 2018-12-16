@@ -1,0 +1,37 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "cmd+,",
+        "command": "vim.Esc",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.focusactiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.navigateEditorGroups"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+cmd+enter",
+        "command": "workbench.action.maximizeEditor"
+    },
+    {
+        "key": "ctrl+alt+cmd+=",
+        "command": "workbench.action.evenEditorWidths"
+    }
+]
